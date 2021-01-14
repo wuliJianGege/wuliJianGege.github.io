@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/lhj.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -64,7 +64,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     			
             
     			
@@ -80,6 +80,10 @@
 					<a class="qq" target="_blank" href="/assets/qq.png" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/assets/weixin.JPG" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/448244320" title="bilibili"><i class="icon-bilibili"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -117,6 +121,10 @@
 						<a class="qq" target="_blank" href="/assets/qq.png" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/assets/weixin.JPG" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/448244320" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -170,13 +178,7 @@
 <li>print()语句执行完后会自动换行，即默认最后有个换行符\n</li>
 <li>安装第三方库：<br>（1)控制台输入pip install 包名 即可安装包<br>(2)<a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/%E5%88%B0%E8%BF%99%E9%87%8C%E6%89%BE%E5%88%B0%E5%8C%85%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%88%B0python3.8%E7%9B%AE%E5%BD%95%EF%BC%8C%E7%84%B6%E5%90%8Ecmd%E8%BF%9B%E5%85%A5%E8%BF%99%E4%B8%AA%E7%9B%AE%E5%BD%95%EF%BC%8C%E7%84%B6%E5%90%8Epip">https://www.lfd.uci.edu/~gohlke/pythonlibs/到这里找到包，下载到python3.8目录，然后cmd进入这个目录，然后pip</a> install 包名<br>(3)<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lizhewei/articles/11884514.html,%E8%AE%BE%E7%BD%AE%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%9D%A5%E6%BA%90%E4%B8%BA%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F">https://www.cnblogs.com/lizhewei/articles/11884514.html,设置第三方库来源为国内镜像</a><br>(4)pip install -i<a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> 库名</li>
 <li>加音频：1.导入simpleaudio 2.创建wav音频对象: 对象名 = simpleaudio..WaveObject.from_wave_file(“xxx.wav”) 3.音频对象名.play()播放音频</li>
-<li>计数循环使用for x in range(次数)</li>
-<li>from模块 import * 可直接使用函数，不用模块.函数</li>
-<li>eval()评估函数，用于去除最外层的引号，如eval(“print(a)”)得到并执行print(a)</li>
-<li>round(a,b)表示四舍五入，可用于辅助浮点数的运算，浮点数一般会有不确定的尾数发生在10的-16次方，其中a是小数，b表示小数要截取的位数,可用于小数的比较，如0.1+0.2==0.3的结果是false，所以需要将0.1+0.2使用round(0.1+0.2,1)进行处理让结果舍入一位小数，最后再==0.3得到的结果即是true</li>
-<li>字符串切片：[a:b:c]，a为开头索引，b为结尾索引+1，abc均可省略，ab省略即为开头到结尾，其中c为步长，步长可为负，意思为逆序，如“abc”[::-1]的结果为“cba”
-        
-          <a class="article-more-a" href="/2021/01/13/python/#more">more >></a>
+<li>计数循环使用for x in range(次数)
         
       
 
@@ -248,12 +250,7 @@
 <li>设置颜色格式：“#f00”意思是红，三位代表了三种颜色，f在哪位就是什么颜色。分别为红绿蓝</li>
 <li>TextView：有布局layout_width or layout_height、字体大小textSize、textColor字体颜色、background背景颜色、text文本内容和布局相关(不懂)。。。。</li>
 <li>给控件取id名：id=”@+id/名字”。名字的格式一般为：控件缩写_作用，如给一个TextView取名：tv_username，也就是用户名(这里说的是xml里的代码)，取好了id，java中才好通过相应的方法来找到相应的控件。</li>
-<li>xml中相当于是写好控件，然后java中通过findViewById(R.id.名字)来获取xml中的控件,如通过findViewById(R.id.名字)就可以根据给xml中控件设置好的id名返回这个id名对应的控件。意思是说xml写好的控件只是一个模板，而其实他的真正内容由java来控制。</li>
-<li>LinearLayout：线性布局。默认为水平排列控件，可以orientation=“vertical“来设置垂直排列。padding=“ndp”可以设置控件离上左边框的n个距离。使用这个布局替换默认布局时，需要在控件删除和原来布局有关的内容。</li>
-<li>xml设置控件：先打一个&lt;,然后打控件名，然后安卓studio会弹出提示选择相应控件。</li>
-<li>button控件，布局，内容，背景颜色，字体颜色和大小。
-        
-          <a class="article-more-a" href="/2021/01/13/android/#more">more >></a>
+<li>
         
       
 
@@ -324,14 +321,7 @@
 <li>public class 文件名{}，必须和文件名一致。</li>
 <li>System.out.println Java大小写敏感。</li>
 <li>在变量前加变量类型。</li>
-<li>变量名开头为 字母，下划线，$。</li>
-<li>用+把字符串和变量连接:System.out.println(“sdasdsa”+baby);。</li>
-<li>变量名像这样:myName 第二个单词首字母大写。</li>
-<li>byte:-128~127 boolean: true 和 false。</li>
-<li>一个java源文件 ：0或者1个package语句 0或者多个import语句 class（只有一个public类。</li>
-<li>html写法：&lt;applet code=”hello.class”width=320 height=180&gt;</applet>
-        
-          <a class="article-more-a" href="/2021/01/13/java/#more">more >></a>
+<li>变量名开头为 字母，下划线，$。
         
       
 
@@ -402,17 +392,7 @@
 <li>清屏代码为 system(“cls”),linux系统中是system(“clear”)。</li>
 <li>暂停代码为 system(“pause”)。</li>
 <li>Ctrl+c停止循环。</li>
-<li>Sleep(1000)为休眠1000毫秒，也就是1秒。可以在循环语句让语句停一秒。用时需要头文件&lt;windows.h&gt;。而sleep(1)是linux语言的1s。</li>
-<li>for语句用于知道循环次数。</li>
-<li>int 类型中 /为取整数部分，如13.32取13，所以1332可以/100得13.</li>
-<li>%数字 可以取 小于 数字 的数，如113/10，得3。如113%5=3。</li>
-<li>判断语句时，采用 常数==变量 的格式可以避免出现赋值的错误如 3=a的话 编译时会有提醒错误。</li>
-<li>三元运算符：表达式1 ？a : b     表达式1为真则值为a,否则为b，用于不是情况1就是情况2的情况</li>
-<li>假如除法时，分子或者分母至少要有一个为float类型才能算出小数。</li>
-<li>for（；；）可省略条件 == while(1)。</li>
-<li>如果for()要循环n次，可以for(i=0,i&lt;n; )相当于减一加一 或者for(i=1;i&lt;=n)
-        
-          <a class="article-more-a" href="/2021/01/13/c/#more">more >></a>
+<li>Sleep(1000)为休眠1000毫秒，也就是1秒。可以在循环语句让语句停一秒。用时需要头文件&lt;windows.h&gt;。而sleep(1)是linux语言的1s。
         
       
 
@@ -523,7 +503,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
       
@@ -600,15 +580,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>石兴隆</a>
+              <a href="http://xingLong-hue.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>石兴隆</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简鹏超</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>主页</a>
+              <a href="http://jianpengchao.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简鹏超</a>
             </li>
           
         </ul>
