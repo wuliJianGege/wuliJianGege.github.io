@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>我的python笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="这是我使用python时的一些个人经验。 Quick Start 使用iter()将序列(列表，元组，集合，字典，字符串)转换成迭代器，迭代器的类型将为 序列类型_迭代器 自写模块放在C:\Users\13268\AppData\Local\Programs\Python\Python38\Lib即可调用 python中的else语句是针对上一个条件判断语句(不一定是if)，如果上一个条件判断语句">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的python笔记">
+<meta property="og:url" content="http://example.com/2021/01/13/python/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这是我使用python时的一些个人经验。 Quick Start 使用iter()将序列(列表，元组，集合，字典，字符串)转换成迭代器，迭代器的类型将为 序列类型_迭代器 自写模块放在C:\Users\13268\AppData\Local\Programs\Python\Python38\Lib即可调用 python中的else语句是针对上一个条件判断语句(不一定是if)，如果上一个条件判断语句">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-14T03:17:09.469Z">
+<meta property="article:modified_time" content="2021-01-14T03:19:38.629Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -140,16 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/python/">我的python笔记</a>
+    <h1 class="article-title" itemprop="name">
+      我的python笔记
     </h1>
   
 
@@ -174,12 +176,104 @@
 <li>from模块 import * 可直接使用函数，不用模块.函数</li>
 <li>eval()评估函数，用于去除最外层的引号，如eval(“print(a)”)得到并执行print(a)</li>
 <li>round(a,b)表示四舍五入，可用于辅助浮点数的运算，浮点数一般会有不确定的尾数发生在10的-16次方，其中a是小数，b表示小数要截取的位数,可用于小数的比较，如0.1+0.2==0.3的结果是false，所以需要将0.1+0.2使用round(0.1+0.2,1)进行处理让结果舍入一位小数，最后再==0.3得到的结果即是true</li>
-<li>字符串切片：[a:b:c]，a为开头索引，b为结尾索引+1，abc均可省略，ab省略即为开头到结尾，其中c为步长，步长可为负，意思为逆序，如“abc”[::-1]的结果为“cba”
-        
-          <a class="article-more-a" href="/2021/01/13/python/#more">more >></a>
-        
+<li>字符串切片：[a:b:c]，a为开头索引，b为结尾索引+1，abc均可省略，ab省略即为开头到结尾，其中c为步长，步长可为负，意思为逆序，如“abc”[::-1]的结果为“cba”<a id="more"></a></li>
+<li>input()得到的结果为字符串</li>
+<li>print(“”,end)中，end是一个结尾参数，默认为换行，当不需要用到换行可以使用end=””(空字符串，不是空格)。</li>
+<li>/r意思为将光标放到当前行的行首</li>
+<li>单行刷新可以通过给改变print的end参数让他不换行，然后在字符串参数的句首使用\r让光标回到开头，并且for循环,从而实现,要注意的是，由于IDLE是开发环境，在IDLE中不会执行\r，从而不会实现刷新，但是程序本身是没有错误的</li>
+<li>\放在一行的最后可实现源码换行，接着下一行</li>
+<li>获取当前时间并格式化为 小时：分钟：秒 字符串：time.strftime(“%H:%M:%S”,time.localtime()) </li>
+<li>pip更新出错解决办法：cmd输入python -m pip install -U –force-reinstall pip</li>
+<li>python类成员函数：函数的第一个参数必须为self,在使用该类的实例对象调用这个方法时，默认将该实例传递给self，self也就是代表该实例</li>
+<li><strong>init</strong>(self)为构造函数，在构造对象时自动调用，<strong>del</strong>(self)为析构函数，在删除对象时或者对象跳出某个作用域时自动调用</li>
+<li>python中的类分为类的属性和实例的属性，而c++java中只有类的实例成员。<br>类属性在类的所有方法外面创建，使用时，使用类名.类属性 或者 对象名.类属性调用<br>python的实例属性在init构造函数中创建，使用时，在类的内部使用self.使用实例属性，在类的外部使用实例对象名.使用实例属性，但是要注意，不能通过类名.来调用实例的属性</li>
+<li>python中的类属性(不是实例属性)是可以动态更改或者添加的(通过类名.类属性名= 进行改变，或者直接通过类名.新的变量名= 来新增一个类属性)，意思就是说一个类封装后，是可以在外部对封装好的类的类属性进行更改的，而不用回到这个类里面修改类属性。</li>
+<li>python中还可以在外部给一个封装好的类或者这个类的某个实例（如果有两个实例1，2，给实例1绑定了某个方法，实例2是没有的）动态增加（绑定）方法：import types<br>要绑定的类或者实例.要新增的方法 = types.MethodType(要绑定的方法(注意：函数的第一个参数要为self），要绑定的类或者类的对象)<br>注意：如果给类而不是类的实例绑定了方法，那么这个方法里面的变量会归所有实例所有，也就是变成类属性，任何一个实例调用这个方法就会给这个方法的属性赋值，赋值后其他所有的实例都可以调用这个属性(也就是类属性)</li>
+<li>在IDLE中，下划线 _ 表示最后一次的结果，比如说上一次使用IDLE得到的结果为2，那么_就为2，可以使用_进行运算</li>
+<li>变量前置一个下划线_为受保护成员，受保护成员只能由类和类的子类访问。变量或者方法前置两个下划线__为类的私有成员，类的私有成员只能由该类自己访问，子类也不能访问。而默认情况下是共有成员。</li>
+<li>类方法，静态方法和实例方法：类方法参数为cls，实例方法为self，静态方法没有参数.书写格式如下<br>class baga:<br>  @staticmethod<br>  def bagayalu():<pre><code>   print(&quot;静态&quot;)</code></pre>
+  @classmethod<br>  def yeye(cls):<pre><code>   print(&quot;类方法&quot;)</code></pre>
+  def aaa(self):<pre><code>   print(&quot;实例&quot;)</code></pre>
+</li>
+<li>python中子类的init会覆盖掉父类的init，所以如果想调用父类构造函数，需要手动在子类的init中调用</li>
+<li>多态的好处，在给方法传递参数时，形式参数只要为父类，传入的实际参数就可以为父类本身或者子类，而如果这个方法（1）的内容是调用父类的方法（2），那么这个方法（2）的功能就会根据实际传入的实际参数来实现(因为子类可能会重写父类的方法，但是名字一定是一样的)<br>比如：def run（animal）:<br> animal.lalala<br>假如传了一个animal的子类dog，dog也会调用lalala方法(可能重写，也可能是继承的父类本身的lalala)</li>
+<li>魔方方法：即对python中默认调用的方法进行重写，用__xxx__表示。如生成类的实例对象时默认调用了__new__方法，我们可以手动重写这个方法，这样在生成实例对象时就会自动调用。再比如__init__；比如重写 +-*/所对应的那个函数。</li>
+<li>集合：一般应用：1包含关系的比较 2数据去重(由于集合不允许有相同的元素，所以可以使用set将其他列表之类的东西转换成集合，这样就不会有重复的元素了)</li>
+<li>元组使用()，也可以不使用(),如 return 1，2，3 ,实际上返回的是(1,2,3); 如x=1,2,3 相当于x=(1,2,3)</li>
+<li>元组特殊应用：将其他数据使用tuple（）转换成元组，可以保证数据内的元素不能被修改</li>
+<li>字典的理解：人为的为数据命名索引并显示索引，如一般的索引为0，1，2，我们可以重写索引并且显示索引</li>
+<li>{}为空字典，而不是空集合，空集合需要使用set()来创建</li>
+<li>dict中keys和values返回的并不是列表，而是dict_keys和dict_value类型</li>
+<li>删除字典的元素：del 字典[索引]，这样就可以删除一组k-v对，也可以理解为删除元素的意思就是删除数据，而字典前面的key只不过是索引，就像平常默认索引为0，1，2时删除的也只是数据一样。</li>
+<li>字典计数：<br>counts = {}<br>for word in words(单词的列表):<pre><code>  counts[word] = counts.get(word,0) + 1 (上一次word的对应出现次数加1，如果没有出现过则get函数返回0）</code></pre>
+</li>
+<li>列表的sort: xxx.sort(key=lambda x:x[1],reverse=True)意思是按照xxx列表的第二列进行倒序排序(True为从大到小，默认情况即false为从小到大</li>
+<li>文件有两种展现形式：文本文件和二进制文件</li>
+<li>文件使用：打开-操作-关闭。打开文件将文件从存储状态变为占用状态，关闭文件则相反</li>
+<li>python中的路径写法：<br>绝对路径法：斜杠写成正斜杠/或者转义反斜杠\<br>相对路径:1.用点 . 表示当前文件所在目录 如.baga/bagayalu.txt，2.如果要打开的文件在相同目录下，直接写文件名称即可如baga.txt</li>
+<li>打开文件：文件句柄 = open(打开的文件路径,打开方式)</li>
+<li>关闭文件：close(),如果忘了写，正常退出程序python也会自动关闭文件</li>
+<li>打开方式：(不写默认为只读)<br>r只读，w覆盖写(没有文件创建文件)，x创建写(有文件存在返回异常),a追加写(没有文件创建文件)<br>还有三个是放在上面四种的后面（如果前面什么都没有，那么前面默认为只读）:b二进制模式打开文件，t文本模式打开文件(默认),+增加同时读写功能</li>
+<li>文件常用方法 ：<br>文件句柄.read(size=-1)：读入全部内容，size为要读入字符的长度默认-1(全部)<br>句柄.readline(siez=-1):读入一行,size为要读入的当前行的字符数<br>句柄.readlines(hint=-1):读入所有行，返回一个列表，每一行作为列表的元素,hint为要读入的行数（行的结尾回车符也会读入）<br>句柄.write(text):向文件写入text内容<br>句柄.writelines(lines)：lines是一个字符串列表，但是要注意它并不是将列表里的元素逐行写入文件，而是将元素拼接在一起，如[1,2,3]为123，如果想实现换行，可在每个元素后面加上换行<br>句柄.seek(参数)：用于改变当前文件操作指针的位置(也就是光标),参数：0文件开头 1当前位置 2文件结尾</li>
+<li>文件打开编码出错的方法，最后一个参数加上encoding=”utf-8”</li>
+<li>分行读入两种形式:</li>
+<li>for line in 文件句柄.readlines()</li>
+<li>for line in 文件句柄</li>
+<li>注意！在进行文件写入操作时，字符串和操作(如改变光标，打印字符串(实际上写了内容然后改变光标位置到开头然后再打印字符串都是在缓冲区文件中进行的))都是放在缓冲区文件内的，当使用flush()或者close()字符串才会真正的被写入到文件中。<br>所以在写文件写入相关代码的时候，脑子里一定要区分缓冲区文件和真实文件</li>
+<li>map(函数名xxx,列表或者集合)：对列表或者集合里的每个元素使用xxx函数处理</li>
+<li>一维数据存储使用特殊符号隔开，不使用换行，如 “ “，”,”，“@”</li>
+<li>格式化存储一维数据用”分隔符”.join，如写txt=“123”到文件中，使用”@”.join(txt)存储就变成‘1@2@3@’<br>取数据使用split(“分隔符”)，如取txt出来，然后对txt进行split（“@”）处理就得到列表[‘1’,’2’,’3’]</li>
+<li>二维数据存储使用二维列表存储</li>
+<li>CSV(默认编码风格为excel，编码风格意思就是说表现出来的样子)二维数据存储格式：每一行的元素由逗号分隔，结尾有换行，没有空行<br>格式：1.逗号为英文半角逗号</li>
+<li>某个元素缺失，但它的逗号仍然保留</li>
+<li>二维数据的表头可以作为数据存储，也可以另行存储</li>
+<li>当使用双重for循环对二维数据的一列数据进行加减乘除或者是其他操作时，可以使用for i in range(列表列数（也就是len(列表[0])，但有时候会出错）)在前，然后for j in range(len(列表))在后，然后就可以对一列进行操作了。</li>
+<li>列表不能进行计算，控制某个范围生成多少个数或者一组数 = 一组数*2需要使用numpy模块生成</li>
+<li>for x,y in zip(x,y):可以同时读取x,y</li>
+<li>变量+逗号，如a, 表示这是包括一个元素的元组</li>
+</ol>
+<p>———————————–小项目实践——————————————————————————————————-<br>1.查看IP地址归属地（举一反三，只要爬取的数据是json类型都可以进行下面的操作）：<br>(1)url = “<a target="_blank" rel="noopener" href="http://ip-api.com/json+%E8%A6%81%E6%9F%A5%E7%9A%84Ip%E5%9C%B0%E5%9D%80&quot;">http://ip-api.com/json+要查的Ip地址&quot;</a><br>(2)requests.get()爬取文本<br>(3)json将文本去掉双引号变成字典<br>(4)通过key即可获得value<br>———————————–JSON内置模块——————————————<br>1.JSON是一种通用的数据格式，实际上就是字典的字符串形式<br>2.JSON模块主要用于对json数据进行编解码，也就是对python字典对象序列化为json数据(将Python数据变成字符串)或者将json数据反序列化为python字典对象(去掉json数据的字符串就变成了python字典对象)<br>3.json.dumps(字典)：给字典数据加引号，字典转换成string类型<br>4.json.loads(字典字符串)：给字典字符串去引号，string类型转换成字典<br>5.dump(json文件句柄,字典):将字典对象序列化后写入json文件<br>6.load(UTF-8编码打开的json文件句柄):取出json文件中的数据序列并反序列化成python字典<br>6.sort_keys = TRUE：将字典按key排序，默认参数为FALSE<br>———————————–re模块:正则表达式——————————————</p>
+<p>———————————–pygame——————————————<br>1.pygame具体用法可上官网看官方文档，<a target="_blank" rel="noopener" href="https://www.pygame.org/docs">https://www.pygame.org/docs</a><br>2.pygame中的交互：窗口不断刷新的while { 1获取事件列表，2遍历事件列表中的每个事件并找到要处理的事件然后进行相应的操作 }<br>3.pygame中容器叫做surface,如窗口，如放在窗口里的其他东西(文本)也是surface，直接查文档使用<br>4.pygame先设置字体，然后使用字体的方法绘制surface得到一个文本surface<br>5.pygame中的矩形处理: Rect意为区域(矩形)，是一个类，该类有四个属性：left,top,width,height 其中left,top为区域左上角的坐标，width和height为图片的宽和高<br>6.注意：通过类名.属性调用的属性是写该类时原本的属性，而在声明该类的对象时，只是把该值给了对象的相同名字的属性，对对象的属性进行改变时，类也就是蓝图中的属性是不会改变的，要改变就得通过类名.属性=xxx 进行改变。<br>7.在有多个类时，类的全局变量也类似于整个项目的全局变量，只不过是通过类名调用<br>8.把某个surface控制在窗口surface可以分别对各个方向进行控制，如向左时的范围只要控制rect的left不超过窗口的0，无需控制窗口的右边界；而右边界则也是只控制这个surface的右边界不超过窗口的右边界即可，无需控制左边界。这样就可以避免在到达右边界时无法再前进的条件影响到其他方向的移动：如right &gt; 100时，right+1，这时right为100，如果向其他方向移动的条件也加上这句语句的话，就无法移动了，因为无论向哪个方向，这个条件都不成立<br>9.pygame窗口内其他surface边界处理：通过矩形的left与top坐标以及矩形的宽高<br>10.通过按住方向键使游戏人物移动原理:其实上只有两个操作，一个是按下方向键，一个是放开方向键，思路是：按下方向键人物就进入循环，往一个方向移动一定的距离，当放开方向键时则退出循环。<br>11.通过time模块的sleep来控制循环进而控制屏幕刷新速度进而控制人物移动速度（真正开发别这样噢）</p>
+<p>———————————–turtle——————————<br>1.setup(width,height,startx,starty)设置窗口，前二者为窗口的宽高，后二者为窗口左上角点在屏幕的坐标，坐标原点在电脑屏幕左上角，向右向下为正方向，当后二者不写时，默认窗口在电脑屏幕中间<br>2.空间坐标体系：绝对坐标体系和海龟坐标体系。<br>绝对坐标：以窗口画布中间为原点(0,0)，向右为x正方向，向上为y正方向。<br>海龟坐标：以当前海龟的头部方向为前进方向，海龟当前左右方向分别叫左侧方向和右侧方向，海龟当前屁股方向为后退方向<br>3.goto(x,y)海龟走到绝对坐标体系中的x,y点<br>4.fd(d)海龟在海龟坐标的前进方向中前进d像素<br>5.bk(d)海龟在海龟坐标的后退方向后退d像素<br>6.角度坐标体系:绝对坐标角度和海龟角度。绝对角度坐标:以窗口为标准，x轴为0°或者360°，x轴逆时针旋转为正方向，顺时针旋转为反方向，比如y轴正方向可以为90°也可以为-270°<br>7.seth(angle)（h意思为heading）设置海龟的头方向为绝对角度坐标中的angle°方向，如30°，-30°分别为逆时针旋转30°，顺时针旋转30°<br>8.left(angle)设置海龟的头(运动方向)方向按照海龟当前运动方向的左边旋转angle度<br>9.right(angle)设置海龟的头(运动方向)方向按照海龟当前运动方向的右边旋转angle度<br>10.circle(r,angle)从海龟当前运动方向向左r距离为圆心，逆时针画角度为angle度的弧，angle为360度时则为⚪，angle默认情况为360<br>11.RGB的三个参数可用整数0<del>255表示，也可以用小数0</del>1表示，如白(255,255,255)=(1,1,1)，turtle默认使用小数。<br>12.colormode(mode)用于改变RGB的参数表示，mode分两种：1：255    2：1.0   分别为整数表示和小数表示<br>13.penup()抬起画笔，即不会有路径痕迹,别名pu()<br>14.pendown()落下画笔，开始有痕迹,别名pd()<br>15.pensize(width),画笔宽度，别名width(width)<br>16.pencolor(color),赋予海龟颜色,color可以为颜色字符串”red”(小写)，color也可以为RGB小数值如(0.63,0.13,0.94)，也可以为RGB元组值((0.63,0.13,0.94))<br>17.done()意思为停止绘画，窗体不退出<br>18.hideturtle,隐藏海龟光标<br>19.填充颜色:<br>turtle默认颜色参数的模式为1.0，需要先使用turtle.colormode(255)转换成255模式<br>-设定填充色：fillecolor(r, g, b)<br>-开始填充：begin_fill()<br>-结束填充：end_fill()</p>
+<p>———————————–GUI模块：tkinter——————————<br>自己上网搜！<br>1.声明控件和布局最好分两行代码写，不然可能出错，比如Entry控件在使用get方法时的报错<br>2.各种控件可以查看餐饮管理系统里的代码<br>3.按钮文本可以绑定一个文本变量，然后添加事件绑定，当这个文本变量变化时，按钮的文本也随之改变，这样就可以直接通过改变变量的值来改变按钮文本了</p>
+<p>———————————-pyautogui自动化—————————————-<br><a target="_blank" rel="noopener" href="https://www.jb51.net/article/146786.htm">https://www.jb51.net/article/146786.htm</a></p>
+<p>———————————-pyinstaller打包程序—————————————-<br>1.只能通过控制台以命令行形式使用pyinstaller<br>2.使用形式: pyinstaller +参数（常用1：-F +py源代码 生成的exe将单独放在dist文件，而-D为默认方式，会将所有文件放在dist文件夹。2：-i + ico图片生成图标），参数可以不止一个<br>3.-F生成的build和pycache文件可以删除</p>
+<p>———————————-jieba：中文分词库—————————————-<br>1.三种分词模式：精确模式，全模式，搜索引擎模式<br>2.常用精确模式：jieba.lcut（变量）</p>
+<p>———————————-wordcloud词云库—————————————-<br>1.使用方法：<br>(1).a=wordcloud.WordCloud(各种配置参数,这些参数决定了词云的样式)：创建一个词云对象<br>(2).a.generate(字符串文本):根据文本内容自动生成词云<br>(3):a.to_file(文件名+格式):生成词云图片<br>2.具体的配置参数请百度，下面列举常用参数：<br>width:词云图片宽度<br>height:词云图片高度<br>font_path(字体参数)=“msyh.ttc”(微软雅黑字体)<br>background_color<br>min/max_words:要显示的词的数量最多/最少<br>max/min_font_size：限制最大或最小字号<br>font_step:每种字字号大小间隔，默认为1<br>mask:词云图片的形状，使用方法：<br>（1）from scipy.misc import imread<br>（2）mk = imread(“指定一张形状图片参数”)<br>（3）创建词云对象时使用mask参数：mask=mk<br>3.中文词云：jieba库分词-&gt;” “.join()添加分隔符同时转换成长字符串-&gt;生成词云<br>4.英文词云:直接生成词云</p>
+<p>———————————-requests库网络爬虫—————————————-<br>1.F12打开网站html文本代码<br>2.爬虫步骤：向某个网站服务器发送请求-&gt;得到回复response(可能失败)-&gt;对response对象进行处理<br>3.get()：向网站服务器发出请求，返回response对象<br>get()常用参数：<br>url:要获取的页面的地址<br>headers：字典属性，添加代理发出请求，有的网站可能会反爬虫进而导致请求失败，这时候就需要使用headers参数，使用方法：<br>打开网站-&gt;F12-&gt;network-&gt;随便点一个东西-&gt;在右边找到headers(标头)-&gt;找到user-agent复制下来-&gt;创建变量xxx = {“user-agent”:”粘贴”}-&gt;在get中使用参数get(url,headers=xxx)<br>timeout（延迟）：控制请求的响应时间，以s为单位，如果发送请求的时间超过这个时间则请求出错<br>4.post():也是向网站服务器发送请求，但是要将数据一起发送，参数和get()差不多，有一些参数get()没有<br>参数:<br>data：字典属性，比如将登陆信息中的账号密码发送给网站服务器<br>5.response对象方法或属性:<br>status_code属性：查看请求失败还是成功，成功返回200，失败返回404<br>text属性：http响应请求内容而得到的html代码的字符串形式<br>content属性：http响应请求内容而得到的网站的html代码二进制形式<br>encoding：返回的html代码的编码形式<br>apparent_encoding：从内容中分析出来的响应内容的编码方式<br>6.通过爬取下载东西到电脑本地磁盘的办法：<br>(1)一般的爬取：<br>爬取并通过二进制创建(wb)的方式open一个文件（这个文件就是你要下载的东西的名字.拓展名，比）-&gt;向文件写入response对象.content(二进制)<br>(2)如果是爬取文本可以用上面的方法，也可以用下面的方法：<br>爬取-&gt;查看响应内容的编码形式encoding-&gt;open(“文件保存路径以及要保存的名字.拓展名”，”文本创建的方式打开”，encoding=”要与响应内容的编码形式一致”)-&gt;向文件写入response对象.text<br>7.使用正则表达式来获取响应体中的url</p>
+<p>———————————-CSVpython内置模块—————————————-<br>1.大致使用流程：导入csv模块 -&gt; 打开csv文件（根据需求按r或者w打开）-&gt;创建一个csv文件阅读者对象或者csv文件写作者对象 -&gt;根据需要让阅读者或者写作者干活(调用方法)<br>2.csv文件阅读者：file_reader = csv.reader(file)，创建file文件的阅读者<br>方法或者属性：<br>line_num:光标前的所有行数<br>for i in 阅读者：i就是每行csv文件的内容(列表)<br>3.csv文件写作者:file_writer = csv.writer(file)<br>方法或者属性:（注意打开文件时要多加一个newline=””参数，取消掉换行，writerow默认换行）<br>writeow(列表)：写一行数据到文件中<br>writerows(二维列表)：写完全部数据<br>4.注意要关闭文件<br>5.如果要写一个表头，如 “学号，姓名，班级”，就要创建字典写作者(DictWriter):<br>先用一个列表确定表头的内容：name = [“学号”，“班级”]<br>然后创建字典写作者并写入表头参数 writer = csv.DictWriter(file,fieldnames = name)<br>然后调用writeheader()方法写入头<br>然后要按照字典格式写入内容，就像数据库添加一条元组信息一样，如writerow({“学号”:”111”,”姓名”:”啦啦啦”})<br>然后关闭文件<br>6.list(reader对象)得到的是二维列表，列表的每个元素为一行数据</p>
+<p>———————————–数据可视化绘图库matplotlib库的pyplot：——————————————<br>1.from matplotlib import pyplot as plt，一般导入的是matplotlib里的pyplot<br>2.基本用法：plt.figure()创建矩形图像窗口(不写会默认创建)-&gt;plt.plot(x,y)向上一个图像窗口绘制图像-&gt;plt.show()展示图像<br>    注意：一个figure图像相当于一个容器，下面进行的plot无论多少个都是在这个figure图像上进行，除非遇到第二个figure，创建了另一个figure那么接下        来进行的plot绘图就会画在第二个figure图像上<br>3.figure()方法:图像窗口<br>    常用参数:<br>    figsize=(x,y)：图像大小<br>4.plot(x,y)方法：<br>    常用参数:<br>    x，y：为一组数量相同的数，一般用numpy生成array类进行操作，使用array类时y可以为x的函数，如y=x*2<br>    color：线的颜色<br>    linewidth：线宽<br>    linestyle：线的样式，”–”为虚线，”-“为实线<br>5.截取图像要显示的区域：<br>    xlim((a,b))方法：限制要显示的x轴的范围<br>    ylim()方法同上<br>6.给xy轴添加标签(默认不支持中文)：<br>    xlabel(字符串)方法<br>    ylabel()方法同上<br>7.重新刻画x或y轴(意思就是原来的轴清空了，然后你想显示哪些刻度就显示哪些刻度，然后还可以给刻度起名字)<br>    xticks(一组刻度数，(字符串列表))：将这组刻度数显示在轴上的对应位置，如xticks([1,1.1111,300])，坐标轴将刻画1，1.1111，300位置上的刻度<br>    字符串列表参数：给刻度命名，ps：元素个数需要相同。如xticks([1,1.1111,300],[“a”,”b”,”c”])，坐标轴刻画1，1.1111，300上的刻度然后相应命名为a b c<br>    传入()空元组即没有刻度<br>注意：由于只显示重命名的刻度，所以xlim会失效（即如果在前面截取了视图，而又使用了超过截取视图范围的xticks，将显示xticks优先)<br>8.设置坐标轴的位置以及坐标轴刻度的位置：<br>    默认坐标轴分为left,bottom,right,top四条<br>    步骤:1.首先获取当前坐标轴对象：ax = plt.gca()  gca:getcurrentaxis<br>            2.然后再进行对坐标轴的操作：<br>        ax.spines[‘right’].set_color(“red”)：设置右坐标轴颜色为红，none为无颜色<br>        ax.spines[“left”].set_position((‘data’,0))：设置左坐标轴的位置在数据的0位置上<br>        ax.xaxis.set_ticks_position(“bottom”)：设置x坐标轴的刻度位置在bottom坐标轴上<br>9.图例legend()方法：方程线的注释，哪条线是哪个方程的<br>    首先确定图例的样式并保存在一个元组变量中(等号后面的内容一样执行，也就是说虽然赋值给了变量他一样在figure上画图)，如l1, = plt.plot(x,y,color,linewidth,linestyle)，注意变量要加逗号，表示这是一个只有一个元素的元组<br>    然后使用plt.legend(handles=[图例样式变量,…(可以多个]，labels=[“要显示的字符串”,””,””]，loc=”best（图例要拜访的位置，best意思是自动寻找最好的位置，更多参数自行百度）”)<br>    然后show()，就会把坐标轴上的东西和图例显示出来了<br>10.文本标注：在figure的某个位置写上文本注释<br>plt.text(x,y,字符串)在x,y坐标开始写字符串<br>11.散点图：很多个点的图<br>plt.scatter(x,y)：在坐标(x,y)上画一个点<br>plt.scatter(x坐标的列表，y坐标的列表)：画出一组(x,y)的点<br>scatter的其他参数：<br>alpha:透明度，如alpha=0.5，重合的点颜色会深<br>12.直方图(条形图)<br>    plt.bar(x,y)：x和y一一对应<br>参数：</p>
+<pre><code>-y,-x:柱子从相反的那边开始
+facecolor:柱子里面的颜色
+edgecolor:柱子边框的颜色
+给柱子顶端加数据：for x,y in zip(x,y):plt.text(x,y,&quot;数据&quot;)</code></pre>
+<p>———————————–numpy库：——————————————<br>1.import numpy as np<br>2.np.linspace(a,b,c)：在a~b之间随机生成c个数，返回的是array类的对象，常与plt配合使用</p>
+<p>———————————–os库：操作系统库（可用于自动化，模拟自己玩电脑）——————————————<br>1.路径操作：os.pth库<br>2.打开程序：os.system()</p>
+<p>———————————–opencv-python第三方模块(cv2模块)——————————————<br>1.读取图片到内存，注意图片名不能为中文<br>2.展示图片(打印图片到屏幕)<br>3.保存图片到文件<br>4.平移图片<br>5.旋转图片<br>6.翻转图片<br>7.截取图片<br>8.色彩通道分离和色彩通道融合(平时看到的图片是三色合成的)<br>9.色彩空间转换（rgb转换)<br>10.读取视频文件或者摄像头<br>11.将视频帧图片展示到窗口<br>12.基本使用方法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42444944/article/details/92765803">https://blog.csdn.net/qq_42444944/article/details/92765803</a><br>人脸识别：<br>图片：创建脸的模型并添加级联器-&gt;将图片换成灰色空间-&gt;识别图片中的人脸-&gt;进行人脸标记<br>视频：把视频分为帧，对每帧进行上述处理，最后一帧帧展现图片<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1a395047d5d6">https://www.jianshu.com/p/1a395047d5d6</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ArchitecTang/p/10189997.html">https://www.cnblogs.com/ArchitecTang/p/10189997.html</a><br><a target="_blank" rel="noopener" href="http://www.mokezhan.com/73934.html">http://www.mokezhan.com/73934.html</a><br>———————————–pymssql：连接sql server接口库——————————————<br>1.在更改数据库数据时记得提交commit<br>2.提交数据时，应该放在最后一个command中(假如触发btn2和触发btn3的函数中都有连接数据库操作)，比如，btn1,btn2,btn3，btn1的command为btn2，btn2的command为btn3,那么我们提交数据更改的语句应该在触发btn3中的函数中写，否则可能数据不能及时更改(比如在触发btn2的函数中提交)</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的好意，但我不是那样的人<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +282,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/python/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/13/python/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/13/android/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的安卓开发笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -217,244 +370,14 @@
 
 
 
-
   
-    <article id="post-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/android/">我的安卓开发笔记</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/13/android/" class="archive-article-date">
-  	<time datetime="2021-01-14T03:14:49.306Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我刚接触安卓开发时的一些笔记。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>activity结构:1.java源代码 2.xml配置文件。java名字为xxxActivity,xml名字为activity_xxx.xml</li>
-<li>控件相当于java的容器按钮什么的。。。</li>
-<li>安卓尺寸单位：字体用sp，除字体以外用dp，普通像素为px。dp:安卓尺寸单位，又称与设备无关像素，也就是会根据屏幕大小自动缩放。sp：有dp的功能，还可以根据用户喜好来缩放。使用方法：设置字体=300sp，设置其他=300dp</li>
-<li>match_parent：在设置长宽时使用，意思是和父窗体一样。wrap_content：设置长宽时使用，意思是和内容大小一致。如字体是200sp，设置TextView的布局的width为wrap_content文本框就会和字体200sp一样大</li>
-<li>设置颜色格式：“#f00”意思是红，三位代表了三种颜色，f在哪位就是什么颜色。分别为红绿蓝</li>
-<li>TextView：有布局layout_width or layout_height、字体大小textSize、textColor字体颜色、background背景颜色、text文本内容和布局相关(不懂)。。。。</li>
-<li>给控件取id名：id=”@+id/名字”。名字的格式一般为：控件缩写_作用，如给一个TextView取名：tv_username，也就是用户名(这里说的是xml里的代码)，取好了id，java中才好通过相应的方法来找到相应的控件。</li>
-<li>xml中相当于是写好控件，然后java中通过findViewById(R.id.名字)来获取xml中的控件,如通过findViewById(R.id.名字)就可以根据给xml中控件设置好的id名返回这个id名对应的控件。意思是说xml写好的控件只是一个模板，而其实他的真正内容由java来控制。</li>
-<li>LinearLayout：线性布局。默认为水平排列控件，可以orientation=“vertical“来设置垂直排列。padding=“ndp”可以设置控件离上左边框的n个距离。使用这个布局替换默认布局时，需要在控件删除和原来布局有关的内容。</li>
-<li>xml设置控件：先打一个&lt;,然后打控件名，然后安卓studio会弹出提示选择相应控件。</li>
-<li>button控件，布局，内容，背景颜色，字体颜色和大小。
-        
-          <a class="article-more-a" href="/2021/01/13/android/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/android/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/java/">我的java笔记</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/13/java/" class="archive-article-date">
-  	<time datetime="2021-01-14T03:11:54.697Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我刚接触java语言时的一些笔记。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>java三大特性:封装、继承和多态()。</li>
-<li>javac+文件名.java解释。</li>
-<li>java+文件名 运行，java命令后不加拓展名。</li>
-<li>public class 文件名{}，必须和文件名一致。</li>
-<li>System.out.println Java大小写敏感。</li>
-<li>在变量前加变量类型。</li>
-<li>变量名开头为 字母，下划线，$。</li>
-<li>用+把字符串和变量连接:System.out.println(“sdasdsa”+baby);。</li>
-<li>变量名像这样:myName 第二个单词首字母大写。</li>
-<li>byte:-128~127 boolean: true 和 false。</li>
-<li>一个java源文件 ：0或者1个package语句 0或者多个import语句 class（只有一个public类。</li>
-<li>html写法：&lt;applet code=”hello.class”width=320 height=180&gt;</applet>
-        
-          <a class="article-more-a" href="/2021/01/13/java/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/c/">我的C语言笔记</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/13/c/" class="archive-article-date">
-  	<time datetime="2021-01-14T01:30:05.590Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我刚接触c语言时的一些笔记。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>单个字符用‘ ’，多个字符用“ ”。</li>
-<li>if(a&lt;50) else if()时，可不用再加a&gt;=50的条件，因为小于50的数是进不了第二条if语句的。不过要先判断a的值，如a&lt;0就重新输入。看情况用。</li>
-<li>想让用户再次运行程序就用循环语句，如：成功就用break跳出循环，不成功就继续循环。</li>
-<li>清屏代码为 system(“cls”),linux系统中是system(“clear”)。</li>
-<li>暂停代码为 system(“pause”)。</li>
-<li>Ctrl+c停止循环。</li>
-<li>Sleep(1000)为休眠1000毫秒，也就是1秒。可以在循环语句让语句停一秒。用时需要头文件&lt;windows.h&gt;。而sleep(1)是linux语言的1s。</li>
-<li>for语句用于知道循环次数。</li>
-<li>int 类型中 /为取整数部分，如13.32取13，所以1332可以/100得13.</li>
-<li>%数字 可以取 小于 数字 的数，如113/10，得3。如113%5=3。</li>
-<li>判断语句时，采用 常数==变量 的格式可以避免出现赋值的错误如 3=a的话 编译时会有提醒错误。</li>
-<li>三元运算符：表达式1 ？a : b     表达式1为真则值为a,否则为b，用于不是情况1就是情况2的情况</li>
-<li>假如除法时，分子或者分母至少要有一个为float类型才能算出小数。</li>
-<li>for（；；）可省略条件 == while(1)。</li>
-<li>如果for()要循环n次，可以for(i=0,i&lt;n; )相当于减一加一 或者for(i=1;i&lt;=n)
-        
-          <a class="article-more-a" href="/2021/01/13/c/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/c/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -477,8 +400,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

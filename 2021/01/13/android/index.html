@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>我的安卓开发笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="这是我刚接触安卓开发时的一些笔记。 Quick Start activity结构:1.java源代码 2.xml配置文件。java名字为xxxActivity,xml名字为activity_xxx.xml 控件相当于java的容器按钮什么的。。。 安卓尺寸单位：字体用sp，除字体以外用dp，普通像素为px。dp:安卓尺寸单位，又称与设备无关像素，也就是会根据屏幕大小自动缩放。sp：有dp的功能，还">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的安卓开发笔记">
+<meta property="og:url" content="http://example.com/2021/01/13/android/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这是我刚接触安卓开发时的一些笔记。 Quick Start activity结构:1.java源代码 2.xml配置文件。java名字为xxxActivity,xml名字为activity_xxx.xml 控件相当于java的容器按钮什么的。。。 安卓尺寸单位：字体用sp，除字体以外用dp，普通像素为px。dp:安卓尺寸单位，又称与设备无关像素，也就是会根据屏幕大小自动缩放。sp：有dp的功能，还">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-14T03:14:49.306Z">
+<meta property="article:modified_time" content="2021-01-14T03:18:49.585Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -140,93 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-android" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/python/">我的python笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/13/python/" class="archive-article-date">
-  	<time datetime="2021-01-14T03:17:09.469Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我使用python时的一些个人经验。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>使用iter()将序列(列表，元组，集合，字典，字符串)转换成迭代器，迭代器的类型将为 序列类型_迭代器</li>
-<li>自写模块放在C:\Users\13268\AppData\Local\Programs\Python\Python38\Lib即可调用</li>
-<li>python中的else语句是针对上一个条件判断语句(不一定是if)，如果上一个条件判断语句为假则执行else。如 for、while、except等都是条件判断语句，当他们不执行时，则执行else。</li>
-<li>print()语句执行完后会自动换行，即默认最后有个换行符\n</li>
-<li>安装第三方库：<br>（1)控制台输入pip install 包名 即可安装包<br>(2)<a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/%E5%88%B0%E8%BF%99%E9%87%8C%E6%89%BE%E5%88%B0%E5%8C%85%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%88%B0python3.8%E7%9B%AE%E5%BD%95%EF%BC%8C%E7%84%B6%E5%90%8Ecmd%E8%BF%9B%E5%85%A5%E8%BF%99%E4%B8%AA%E7%9B%AE%E5%BD%95%EF%BC%8C%E7%84%B6%E5%90%8Epip">https://www.lfd.uci.edu/~gohlke/pythonlibs/到这里找到包，下载到python3.8目录，然后cmd进入这个目录，然后pip</a> install 包名<br>(3)<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lizhewei/articles/11884514.html,%E8%AE%BE%E7%BD%AE%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%9D%A5%E6%BA%90%E4%B8%BA%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F">https://www.cnblogs.com/lizhewei/articles/11884514.html,设置第三方库来源为国内镜像</a><br>(4)pip install -i<a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> 库名</li>
-<li>加音频：1.导入simpleaudio 2.创建wav音频对象: 对象名 = simpleaudio..WaveObject.from_wave_file(“xxx.wav”) 3.音频对象名.play()播放音频</li>
-<li>计数循环使用for x in range(次数)</li>
-<li>from模块 import * 可直接使用函数，不用模块.函数</li>
-<li>eval()评估函数，用于去除最外层的引号，如eval(“print(a)”)得到并执行print(a)</li>
-<li>round(a,b)表示四舍五入，可用于辅助浮点数的运算，浮点数一般会有不确定的尾数发生在10的-16次方，其中a是小数，b表示小数要截取的位数,可用于小数的比较，如0.1+0.2==0.3的结果是false，所以需要将0.1+0.2使用round(0.1+0.2,1)进行处理让结果舍入一位小数，最后再==0.3得到的结果即是true</li>
-<li>字符串切片：[a:b:c]，a为开头索引，b为结尾索引+1，abc均可省略，ab省略即为开头到结尾，其中c为步长，步长可为负，意思为逆序，如“abc”[::-1]的结果为“cba”
-        
-          <a class="article-more-a" href="/2021/01/13/python/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/python/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-android" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/android/">我的安卓开发笔记</a>
+    <h1 class="article-title" itemprop="name">
+      我的安卓开发笔记
     </h1>
   
 
@@ -251,12 +176,74 @@
 <li>xml中相当于是写好控件，然后java中通过findViewById(R.id.名字)来获取xml中的控件,如通过findViewById(R.id.名字)就可以根据给xml中控件设置好的id名返回这个id名对应的控件。意思是说xml写好的控件只是一个模板，而其实他的真正内容由java来控制。</li>
 <li>LinearLayout：线性布局。默认为水平排列控件，可以orientation=“vertical“来设置垂直排列。padding=“ndp”可以设置控件离上左边框的n个距离。使用这个布局替换默认布局时，需要在控件删除和原来布局有关的内容。</li>
 <li>xml设置控件：先打一个&lt;,然后打控件名，然后安卓studio会弹出提示选择相应控件。</li>
-<li>button控件，布局，内容，背景颜色，字体颜色和大小。
-        
-          <a class="article-more-a" href="/2021/01/13/android/#more">more >></a>
-        
+<li>button控件，布局，内容，背景颜色，字体颜色和大小。<a id="more"></a></li>
+<li>安卓注册监听器：（在java部分中注册）setOnClickListener(new View.OnClickListener() {<pre><code>        @override
+        public void onClick(View v) &#123;
+        具体功能
+        ｝
+    ｝）；</code></pre>
+</li>
+<li>安卓特有的吐司：就是短暂的显示一段话。such as 没网时说网络断开。<br>具体格式:Toast.makeText(java名.this（应该是指该activity吧），“文本内容”,Toast.LENGTH_SHORT（这里意思是持续长度）).show();<br>不要忘了show（），有show才会显示。安卓studio可以快捷的打出这个代码然后可以直接更改文本内容就好了，不用手动打完。</li>
+<li>打开一个新的activity：</li>
+<li>首先搞个意图 Intent intent=new Intent(当前activity.this，跳转的activity.class)；</li>
+<li>然后使用方法startActivity(intent)</li>
+<li>关闭当前activity：finish();</li>
+<li>alt+enter可以快捷修复代码</li>
+<li>xml开头为版本和编码 <?xml version="1.0" encoding="utf-8"?></li>
+<li>AndroidManifest表示清单，里面放有界面、控件、权限等各种东西。这个文件放在src的main里面。mannifest只能有一个，少了就不能运行要运行的界面控件啥的。</li>
+<li>manifest的xml文件以一个&lt;manifest …..&gt;开始,里面配置包名，格式: package=“软件的包名”，用来标识该应用。&lt;application…&gt;是全局配置。还有activity配置，格式:&lt;activity android:name=”.activity的文件名”，.表示接着包名，然后</activity>结尾，activity配置一定放在application配置下。</li>
+<li>设置默认启动界面：<intent-filter><action android:name="android.intent.action.MAIN"/>
+<category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+这是固定写法，把该代码放在要设置默认启动的activity下。如果n个界面都设置了这段代码，桌面就会有n个app，分别代表n个不同的启动</li>
+<li>xml代码的配置都是有始有终的，像｛｝一样，先是&lt;…/&gt;,然后最后一般要接上&lt;/….&gt;或者不接。</li>
+<li>java代码设置布局时使用setContentView(参数)，其中参数可以理解为xml配置文件的路径，也就是R.layout.xxxxxx.xml，R先理解为该project吧。</li>
+<li>xml文件可以使用onClick=”方法名”给控件添加事件，事件会执行该方法，该方法在java文件中写，该方法的参数为View view,没有的话会不能实现功能，View可能相当于接受到点击事件后传递的信息，接受到才会执行该方法。</li>
+<li>文本输入框:&lt;EditText…/&gt;，有hint(没有输入前的提示文字)、textColorHint(hint的字体颜色)、text、textColor、textSize……<br>获取输入的文本在java中使用getText().toString().trim(),toString是用来转换成字符串，和java语法的textField有点不同吧。。maybe</li>
+<li>TextUtils.isEmpty(字符串)用来判断字符串是否为空，当然这个是静态方法，了解就好了，可以直接使用Strig类的isEmpty()方法判断。</li>
+<li>当在xml中使用onClick然后在java中写代码时，可能会有错误，such as使用25中的方法: 无法从静态上下文中引用非静态方法 equals(Object)，这说明这个onClick可能是静态的。所以使用xml的onClick时，java中不能使用静态方法(如直接类名.方法名()格式的方法就是静态方法)</li>
+<li>显示图片:&lt;imageView…./&gt;有布局、背景(背景也可以用图片来填充，调用图片方法和src一样)、src….其中src=“@目录/图片文件名”用来调用图片，目录一般在drawable文件中。</li>
+<li>图片放在app.src.main.res中，其中drawable和mipmap都可以放图片，放的图片名字格式为:ic_xxxxxx(注意：图片名字必须是小写，否则会报错)，ic是icon图片的意思，放图片的方法为:复制图片然后粘贴，放drawable时，图片拓展名要为png,jpeg,或者gif(一般不用，要使用框架)，至于mipmap就不清楚咯，这条笔记是让你放drawable的，maybe mipmap是放launcher图片的。</li>
+<li>res中放有很多个mipmap开头的文件，他们只是分辨率不同，也就是大小不同。</li>
+<li>下拉列表&lt;ScrollView…&gt;只能装一个控件，所以它放在大布局的外面，它的属性有布局、xmln(xmln放在最外层，所以原来的&lt;什么Layout&gt;中的xmln要剪切到ScrollView中)……写ScrollView时可以先在布局配置里写，因为studio会提供便捷的操作，然后再放到最外层。如果直接放最外层就不会有提示。</li>
+<li>设置app图标：选中文件然后new一个Image assert，然后填路径，名字啥的最好不改，改会怎么样我也不知道也没试过，填了路径就选一下样式就好了，next后会显示output的位置，然后finish会替换原有的launcher图标。</li>
+<li>support包为支持包，也就是第三方库，里面有新的控件啥的，有各种support包。添加方法为33。</li>
+<li>安卓中的dependencies依赖库，相当于java中的类库，如果要使用新的控件，那么就要添加support到依赖中。<br>添加方法：1.在app.src中的build.gradle中的dependencies写入代码添加(咋写我也不知道)，然后sycn同步</li>
+<li>安卓studio工具栏中有个图标是“文件夹右下角有三个正方形”样子的，里面会有dependencies选项，然后点+号选择library那个，输入要添加的support包（小写）。注意：可以连接手机热点来下载，wifi可能不行，最好用2方法，1还没成功过。</li>
+<li>RecyclerView是列表控件，功能强大，需要添加支持包，方法如33中的2。</li>
+<li>非安卓自带的控件在xml文件使用时，&lt;要加上包名.控件…./&gt;</li>
+<li></li>
+<li>安卓排错方式：日志、调试。</li>
+<li>日志:就是程序运行的记录吧，包含有运行的具体那一刻时间和一些其他信息。在java文件中通过log.d(“发送日志的文件名”，“日志信息”)来打印一个包含了发送日志的文件和日志信息的日志。d是debug级别的意思，还有e：error，w：warning和其他。安卓studio日志在logcat中查看，这样就可以知道错误在哪里什么时候发生了，也可以根据自己写的日志出现的位置的上下文来找到error出现的地方。</li>
+<li>调试：安卓studio中通过debug命令运行程序可以进行调试模式，点击左边代码行数来设置断点，断点行代码不执行，设置断点后会出现一个小红圆球，运行到断点处圆球会打钩。</li>
+<li>添加权限：在manifest文件中写：&lt;uses-permission android:name=”android.permission.权限(如网络INTERNET)”。这种方法添加的权限在安装时就需要同意要用到的权限，当你使用没有同意权限的东西如相机时，是用不了的，也不会有提示叫你打开权限。还有一种权限是动态权限，安卓6.0开始使用动态权限，意思是当你使用到一个权限时才会弹出是否开启该权限，这个没学。</li>
+<li>更改sdk版本，在app下的build.gradle中的targetSDK更改然后sync同步。</li>
+<li>请求网络涉及到http，需要添加一个okhttp依赖，添加方法看33.</li>
+</ol>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的好意，但我不是那样的人<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -265,16 +252,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/android/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/13/android/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/01/13/python/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          我的python笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/13/java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的java笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -294,167 +349,14 @@
 
 
 
-
   
-    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/java/">我的java笔记</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/13/java/" class="archive-article-date">
-  	<time datetime="2021-01-14T03:11:54.697Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我刚接触java语言时的一些笔记。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>java三大特性:封装、继承和多态()。</li>
-<li>javac+文件名.java解释。</li>
-<li>java+文件名 运行，java命令后不加拓展名。</li>
-<li>public class 文件名{}，必须和文件名一致。</li>
-<li>System.out.println Java大小写敏感。</li>
-<li>在变量前加变量类型。</li>
-<li>变量名开头为 字母，下划线，$。</li>
-<li>用+把字符串和变量连接:System.out.println(“sdasdsa”+baby);。</li>
-<li>变量名像这样:myName 第二个单词首字母大写。</li>
-<li>byte:-128~127 boolean: true 和 false。</li>
-<li>一个java源文件 ：0或者1个package语句 0或者多个import语句 class（只有一个public类。</li>
-<li>html写法：&lt;applet code=”hello.class”width=320 height=180&gt;</applet>
-        
-          <a class="article-more-a" href="/2021/01/13/java/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/13/c/">我的C语言笔记</a>
-    </h1>
   
 
-        
-        <a href="/2021/01/13/c/" class="archive-article-date">
-  	<time datetime="2021-01-14T01:30:05.590Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我刚接触c语言时的一些笔记。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
-<li>单个字符用‘ ’，多个字符用“ ”。</li>
-<li>if(a&lt;50) else if()时，可不用再加a&gt;=50的条件，因为小于50的数是进不了第二条if语句的。不过要先判断a的值，如a&lt;0就重新输入。看情况用。</li>
-<li>想让用户再次运行程序就用循环语句，如：成功就用break跳出循环，不成功就继续循环。</li>
-<li>清屏代码为 system(“cls”),linux系统中是system(“clear”)。</li>
-<li>暂停代码为 system(“pause”)。</li>
-<li>Ctrl+c停止循环。</li>
-<li>Sleep(1000)为休眠1000毫秒，也就是1秒。可以在循环语句让语句停一秒。用时需要头文件&lt;windows.h&gt;。而sleep(1)是linux语言的1s。</li>
-<li>for语句用于知道循环次数。</li>
-<li>int 类型中 /为取整数部分，如13.32取13，所以1332可以/100得13.</li>
-<li>%数字 可以取 小于 数字 的数，如113/10，得3。如113%5=3。</li>
-<li>判断语句时，采用 常数==变量 的格式可以避免出现赋值的错误如 3=a的话 编译时会有提醒错误。</li>
-<li>三元运算符：表达式1 ？a : b     表达式1为真则值为a,否则为b，用于不是情况1就是情况2的情况</li>
-<li>假如除法时，分子或者分母至少要有一个为float类型才能算出小数。</li>
-<li>for（；；）可省略条件 == while(1)。</li>
-<li>如果for()要循环n次，可以for(i=0,i&lt;n; )相当于减一加一 或者for(i=1;i&lt;=n)
-        
-          <a class="article-more-a" href="/2021/01/13/c/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/13/c/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -477,8 +379,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

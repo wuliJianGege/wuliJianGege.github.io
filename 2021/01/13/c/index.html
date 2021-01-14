@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | Hexo</title>
+  <title>我的C语言笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="这是我刚接触c语言时的一些笔记。 Quick Start 单个字符用‘ ’，多个字符用“ ”。 if(a&lt;50) else if()时，可不用再加a&gt;&#x3D;50的条件，因为小于50的数是进不了第二条if语句的。不过要先判断a的值，如a&lt;0就重新输入。看情况用。 想让用户再次运行程序就用循环语句，如：成功就用break跳出循环，不成功就继续循环。 清屏代码为 system(“cls”)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/01/13/hello-world/index.html">
+<meta property="og:title" content="我的C语言笔记">
+<meta property="og:url" content="http://example.com/2021/01/13/c/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="这是我刚接触c语言时的一些笔记。 Quick Start 单个字符用‘ ’，多个字符用“ ”。 if(a&lt;50) else if()时，可不用再加a&gt;&#x3D;50的条件，因为小于50的数是进不了第二条if语句的。不过要先判断a的值，如a&lt;0就重新输入。看情况用。 想让用户再次运行程序就用循环语句，如：成功就用break跳出循环，不成功就继续循环。 清屏代码为 system(“cls”)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-14T01:30:05.590Z">
-<meta property="article:modified_time" content="2021-01-14T01:30:05.590Z">
+<meta property="article:modified_time" content="2021-01-14T03:10:54.155Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -58,8 +58,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,8 +111,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -133,9 +129,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -150,19 +144,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-c" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      我的C语言笔记
     </h1>
   
 
         
-        <a href="/2021/01/13/hello-world/" class="archive-article-date">
+        <a href="/2021/01/13/c/" class="archive-article-date">
   	<time datetime="2021-01-14T01:30:05.590Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
 </a>
         
@@ -170,15 +164,118 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>这是我刚接触c语言时的一些笔记。</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><ol>
+<li>单个字符用‘ ’，多个字符用“ ”。</li>
+<li>if(a&lt;50) else if()时，可不用再加a&gt;=50的条件，因为小于50的数是进不了第二条if语句的。不过要先判断a的值，如a&lt;0就重新输入。看情况用。</li>
+<li>想让用户再次运行程序就用循环语句，如：成功就用break跳出循环，不成功就继续循环。</li>
+<li>清屏代码为 system(“cls”),linux系统中是system(“clear”)。</li>
+<li>暂停代码为 system(“pause”)。</li>
+<li>Ctrl+c停止循环。</li>
+<li>Sleep(1000)为休眠1000毫秒，也就是1秒。可以在循环语句让语句停一秒。用时需要头文件&lt;windows.h&gt;。而sleep(1)是linux语言的1s。</li>
+<li>for语句用于知道循环次数。</li>
+<li>int 类型中 /为取整数部分，如13.32取13，所以1332可以/100得13.</li>
+<li>%数字 可以取 小于 数字 的数，如113/10，得3。如113%5=3。</li>
+<li>判断语句时，采用 常数==变量 的格式可以避免出现赋值的错误如 3=a的话 编译时会有提醒错误。</li>
+<li>三元运算符：表达式1 ？a : b     表达式1为真则值为a,否则为b，用于不是情况1就是情况2的情况</li>
+<li>假如除法时，分子或者分母至少要有一个为float类型才能算出小数。</li>
+<li>for（；；）可省略条件 == while(1)。</li>
+<li>如果for()要循环n次，可以for(i=0,i&lt;n; )相当于减一加一 或者for(i=1;i&lt;=n)<a id="more"></a></li>
+<li>排序时，两组数据，a[] b[]，b[]是用来记录a[]值原来的位置。如a[0]=10，a[3]=20,排序交换值,a[0]=20,a[3]=10，b[0]=0,b[3]=3变为b[0]=3,b[3]=0<br>也就是说10的数值对应位置为0，20的数值对应位置为3。</li>
+<li>找接近某个值的值可以先排序，然后当值大于某个值时可以直接返回值，或者break。如，1，2，3，4.找接近少于3的值，可当a[i]&gt;=3时，输出a[i-1]<br>或者反过来排序后 4，3，2，1 直接当a[i]&lt;3就输出。</li>
+<li>由于浮点数存在舍入问题，不能直接与0比较相等与否。EPS=1e-6(很小的值‘’10的-6次‘’) 拿fabs(a-0)&lt;=EPS 比较，是就与0相等，不是就不与0相等。等价于<br>a-b&lt;=EPS &amp;&amp; a-b&gt;=-EPS;其实就是绝对值。EPS内为等于0的条件，大于EPS就为大于0.</li>
+<li>fabs()为绝对值。</li>
+<li>&lt;stdlib.h&gt;的exit()可强制结束程序。当（)中为0或者EXIT_SUCCESS为正常退出，为非0和EXIT_FAILURE为非正常退出。</li>
+<li>sqrt()为开方。&lt;math.h&gt;</li>
+<li>switch （表达式）语句中case +常量。常量不能是区间和关系运算符。case运行完无与表达式对应的值则运行default 中的可执行语句。一般将发生频率<br>高的case放前面。</li>
+<li>rand()%100+1=1到100的数。</li>
+<li>rand在第一次编译时就确定了的，运行多少次都不变。</li>
+<li>srand给rand()弄随机数种子。可以先unsighed Int seed,scanf 用%u 来取seed地址，然后srand(seed)；或者取时间srand(time(NULL)) 用前#include&lt;time.h&gt;</li>
+<li>当有两个scanf，第一个中还有缓存数时，会跳过第二个scanf.如：scanf();printf a;scanf();printf b;假如第一次输入2 2，那么a=2,b=2。</li>
+<li>可以通过判断ret=scanf() 是否得到正确输入的数值的个数 来 防止用户在输入数字时错误输入非数字以外的字符。</li>
+<li>pow(n,n-1)为n的n-1次方,n-1要为整数。头文件math.h，不能直接放在printf好像，还是拿个变量接pow返回值吧。</li>
+<li>整数太大用%e输出。</li>
+<li>1e+6的意思是1*10^(6)。</li>
+<li>term 是累加项。</li>
+<li>%nd可以把数放在右边。</li>
+<li>break是跳出本个循环体。continue是结束本次循环进行下次循环，也就是跳回 “}”。</li>
+<li>break和continue只能用于while,for,do-while循环。</li>
+<li>goto可以跳出多重循环。不常用。</li>
+<li>书本说break和goto都不好用，一般设置一个标志性变量flat.如for(i=0;i&lt;=k &amp;&amp; 1==flat;i++)，若循环完，flat就等于1。若循环不完就令flat=0。</li>
+<li>指针定义时，赋值一个NULL，意思为空指针，防止乱访问。如int *ptr=NULL。</li>
+<li>地址为%p,或者%x.前者为指针，后者为16进制。</li>
+<li>int a=1;int * ptr=&a;   *ptr=111中的 * 意思为根据ptr存放的地址（不是ptr内存的地址），找到这个地址存放的空间，把值改为111。也就是a=111。<br>也就是说     * 就是地址的值 *ptr 就是ptr存放的地址对应的值。</li>
+<li>指针的移动：每次移动的大小为 指针指向类型t的sizeof(t)字节。如int类型的指针*p,每次p++移动四字节。</li>
+<li>存放地址的变量一般占四字节。</li>
+<li>数组名其实就相当于指针。指针访问数组元素可以像数组那样写（也可以说是 首地址 加  []  )如：int a[3]={1,2,3};  int *p=a; p[0]=a[0] p[1]=a[1]…….。</li>
+<li>数组的指针三种表达方式：1(最推荐的用法): *(ptr+i)  2(和数组没区别的用法): p[]  3(不建议使用的用法): *p++,因为运行最后一次后，p还会再加一次，从而就会导致指针指向未知的地址。</li>
+<li>数组元素的地址可表示为：&amp;a[i] or a+i；值可表示为：a[i] or *(a+i)    首地址+i还是地址。</li>
+<li>指针接收二维数组时：int (*p)[3] 指针指向含三个元素的一维数组 p++为下一个一维数组。</li>
+<li>指针输出二维数组时，*(<em>(p+i)+j),i是行，j是列 或者a[][3] p=<em>a时，</em>(p+3</em>i+j)</li>
+<li>int *p=*a为列地址。int (*g)[2]=a为行地址。</li>
+<li>int a[][n],int (<em>p)[n]=a+i，这里的n表示指针指向含有四个元素的一维数组,不能理解为n行的数组。</em>(p+i)为行地址，*(*(p+i))为该行第一个地址的值</li>
+<li>int *p[4]表示存放四个指针元素的数组，int (*p)[4]为指向一个含有四个元素的一维数组(不是4个数组，换数组可以用p+i,但实际上换了后指向的是一维数组)</li>
+<li>strlen（a）时注意a不要是指针存放的值。</li>
+<li>做置换矩阵时，记得分情况假如 行大于列，那么用for语句时，j,i要&lt;行数，否则比如3行&gt;2列时，j&lt;2就无法把第三行第一个数弄到第三列，而是只运行到第二列，假如 列大于行，那i就 i，j&lt;列数.</li>
+<li>switch(字符)时，注意空格回车也是字符，假如输入完后按了回车，可能就会出错，所以空格回车也要加case排除。如c=getchar()时，switch(c);</li>
+<li>getchar()采用行缓冲，读到换行符时才结束。</li>
+<li>grade=getchar()时，可以定义grade为int，防止getchar返回值为负数。grade输出时%c为字母，%d则为字母ascii值。</li>
+<li>int a=65，按%c输出时则是输出ASCII值为65的字母。char a=’a’，按%d输出，则输出a的ASCII值(因为a是按ASCII值存放的)。</li>
+<li>在循环语句循环条件判断是否为Y时：printf(“是否继续?Y or N”)时，while(char==’Y’)  应该用scanf(“空格+%c”,char)才能继续进行。</li>
+<li>else-if条件语句中，else同与他最近的if配对(当没有{}括住的时候).</li>
+<li>先运行完一次内层循环才到外层循环运行完。</li>
+<li>if else 无｛｝时只运行一句语句，其他的都是main函数的。</li>
+<li>while(putchar(getchar())!=’?’) { …} 意思为当输出的字符为‘？’时，退出循环。</li>
+<li>错误写法：while(c=getchar()!=’\n’) 输入$并输出字符时会有神奇的现象，应该给c=getchar()加上括号。</li>
+<li>%x.yf x代表包括小数点在内的总位数，y是保留的小数点位数。可用作右对齐。当总位数不足 x位数时在前面补空格。</li>
+<li>像x&lt;0 x=0 x&gt;0 y就变的那种，可以判断之后只算y不printf,然后在最后只printf y=%…..一次。</li>
+<li>输出三角形时，假如输出的内容是 j随着i改变的，则i应该从最大的开始然后i–。当i递增而与i没有固定关系式的j是递减的时候，i可以不从最大的开始，然后让j=i+1开始，结束条件不变如j&lt;4。这样每次j循环次数就会减少。</li>
+<li>system(“color 两个十六进制数字”）前一个代表背景颜色，后一个代表字体颜色。</li>
+<li>1+11+111+1111 后一个为前一个的10倍+1。</li>
+<li>编程思想：累加或者累乘的时候，找term与一项的关系helps。如上面的例子。又如e=1+1/1!+1/2!+…,后一项为前一项除以i (i=0开始)。写term=的时候先写与前一项的关系，再考虑第一项。</li>
+<li>每项变符号只需要确定好第一项的符号后   sign=-sign。</li>
+<li>求情况的算法其实就是枚举法然后转换成代码。如12个球有红3黑3黄6个球，问随便摸八个有多少情况？枚举：0 3 5=8，1 3 4=8·····代码用for i j z。</li>
+<li>累乘的用一个变量，累加两个。</li>
+<li>像1.5元买三种硬币 5分 2分 1分，假如每个至少要有一个，那某种硬币的总数就等于150-另外两个硬币的单价 除以 这个硬币的钱。</li>
+<li>exp(n) 代表e的n次方。</li>
+<li>(flag==NULL)高逼格写法 (!flag) 也就是说 变量为0就运行的情况 可以用   ！代替。</li>
+<li>fgets(a,b,c) 意思为从文件c读取b-1个字符给a。请看89.</li>
+<li>fgets读完返回一个NULL，返回值为字符类型指针。如 char *ret=fgets.ret=NULL。</li>
+<li>sscanf(a,%s   %s)意思是从a字符串读取两个字符串。</li>
+<li>打开文件用fopen,要定义一个FILE *file指针记录路径，格式：file=fopen(“文件路径以及名字”,”打开方式 “)，后面还要判断是否打开成功,打开失败会返回一个NULL给file。<br>打开方式：<br>（1）：r 为以只读方式打开一个 文本 文件，rb则为打开 二进制 文件，r+和rb+则多了一个 覆盖写 的功能，也就是从文件开头开始覆盖。<br>（2）：w 为以只写的方式创建一个 文本 文件，假如文件名存在则会覆盖掉原来的文件，同样的wb为创建二进制文件，w+和wb+增加读功能，也就是边写边读<br>（3）：a 为尾部追加以写的方式打开一个文本文件，ab为打开二进制文件，a+和ab+增加了读的功能。<br>（4）：前两个书签在第一页，最后一个默认书签在最后一页。</li>
+<li>一般正常退出为return 0，错误退出为return 1;</li>
+<li>fopen打开文件时，文件在程序本目录直接打开，要打开其他目录的文件的话，\要多加一个因为c语言\是转义字符。如D:\data\user.txt。</li>
+<li>养成打开文件要关闭的习惯，用fclose(file)关闭文件，不然就相当于没保存(在程序没结束前，可以用pause测试)。如a方式打开文本文件，fputs(“\nxxxx”,file)写入 换行xxxx,不关闭文件时是没有写入操作的，假如后面程序还有很多，并且和以及写入后的文件有关就麻烦了，就只能等程序结束才能保存。实际上，当写入文件时，指定的文件会有输入缓冲区，输入的东西先在输入缓冲区保存，当fclose或者 缓冲区满了 或者fflush(刷新) 或者程序结束才会把写的内容输入到文件。</li>
+<li>int数组没有初始化的元素输出为0，注意是输出为0，但它原来应该没有值.char数组没有初始化的元素输出的是空格，但不是输出时应该不是’\0’。</li>
+<li>char a[]=[‘a’,’b’] strlen(a)时(联系上一个笔记79),‘b’的后一个元素可能不为’\0’，所以strlen(a)此时的值是不准确的，它会一直在内存找’\0’，找到才结束。</li>
+<li>strlen一个字符串的长度为’\0’前所有字符长度。</li>
+<li>字符数组初始化命名时一定要加“”或者 ‘’符号。</li>
+<li>char 类型的指针p，输出时的*p，只是代表第一个字符，要用%c输出，%s会出错，所以要输出就直接输出p指向的字符串变量a。</li>
+<li>EOF=-1.</li>
+<li>fgetc(file) 在文件中读取一个字符，读取失败返回EOF。</li>
+<li>无论提到什么文件都要先打开，再进行读或者写操作。</li>
+<li>gcc编译器中type查看代码。</li>
+<li>gets容易越界，可以用fgets(buff,sizeof(buff),stdin),最多读参数2-1个字符.最后一个为’\0’。</li>
+<li>fgets(变量，读取字符的个数，读取的文件)。读取失败返回 指向字符的指针 NULL。每次读一行。遇到EOF或者读完指定字符数就结束</li>
+<li>fputs(变量，文件)意为把变量打印到文件中。</li>
+<li>scanf读取缓冲区时遇到回车符就停止读取，但这次不读取回车符，如果scanf后还跟有scanf的话，scanf就会先到输入缓冲区中看看有无字符，再进行操作，而此时还有个回车符’\n’，scanf会读取回车符然后结束。所以防止在Y/N时出错，应该 1：scanf(“ %c”)，加个空格在前。2：在第一个scanf后加一个getchar()。3：用fflush(stdin)清空输入缓冲区；4.加个while(c=getchar()!=’\n’)</li>
+<li>fflush(file)刷新文件,不是清空。缓冲区才是刷新清空。</li>
+<li>fscanf(文件，”读取文件的值\n”，).格式化读取为“年龄为:%d 姓名为%s\n”\n 意思是控制结尾，不然下一次scanf会把\n也读进去,变量,变量. 读取的文件相当于scanf输入完毕的输入缓冲区文件    返回值：成功时返回成功读取个数，失败返回EOF。</li>
+<li>字符指针的输出格式： 如char *p=”happy” 打印时(“%c %s %p %p”,*p,p,p,&amp;p)，分别为字符，字符串，字符串地址，指针地址。</li>
+<li>指针指向char二维数组时，直接%s输出字符串所在那行的数组名就好了。如a[][10] (<em>p)[10] 输出</em>p则为第一个10元素数组，也就是第一个字符串。</li>
+<li>指针%s 和p 输出字符串，实际上是从第一个字符开始输出，直到遇到\0就停止。如happy，假如p+1指向的是a，那么p+1输出%s的结果为appy.</li>
+<li>%的符号由%前面数决定。</li>
+<li>二维数组第一维为行数。</li>
+<li>int <em>p;p指p内存的地址。</em>p指p指针指向的那个地址的值。</li>
+<li>一个指针变量，有存放他本身的地址，而该指针存放的是另一个内存(int,float……)的地址,所以指针的指针是指前者存放了后者的地址。c语言中参数的传递是按值的传递(不是指传值传地址中的值。。。)，1.所以某函数fun(int *p(指向int那块内存的指针))，在传递参数时，就要传递int那块内存的地址给p。2.所以某函数fun(int **p(指针p的指针))在传递实参时，要传递p指针的地址，也就是&amp;p。其中1中形参是实参的复制品，1中的实参和形参指向同一个int，int都可以通过在主函数中的实参或者是被调用函数中的形参来改变，最终实参本身是不动的，就好比小李要做作业，然后叫了个小刘帮做作业一样，作业的值改变了，但是小刘并没有进行操作；其中2中形参和实参实际上是同一个东西，只是名字和进行的操作的方式不一样，但是最终的操作都是一样的。当我们要在被调用函数中移动实参指针时，就可以按这种操作来进行，就好比你妈妈命令你去吃饭，跟你自己命令自己去吃饭一样。</li>
+<li>指向结构体的指针p。p-&gt;结构体里的变量  中的p可以理解为该结构体的地址。</li>
+<li>c语言中并没有bool类型，要用只能自己定义，所以比较表达式返回的结果是int型而没有bool型，例如，1==2返回0，1==1返回1。</li>
+<li>free(指针)后，指针仍指向那片内存的地址，而不是NULL，如果free后想直接使用该指针，要先让该指针指向NULL。</li>
+<li>二叉搜索树的用递归实现的删除操作中，应该通过用tmp=T，然后T指向tmp的lchild或者rchild然后返回T指针给上一个节点，这样就能保证返回的值不为乱码(看103，因为假如free(T)然后返回T，上一个节点得到的并不是NULL，而仍然是T的地址，这样在遍历的时候，仍然会遍历T节点的内容。)</li>
+<li>强制转换 (int)a*60 是指强制转换后面的第一个变量，也就是a，先转换再计算。</li>
+<li>如果树的左儿子下标小于等于元素个数-1，就说明有右儿子。</li>
+<li>结构体数组系统自动分配空间，指针才用malloc</li>
+</ol>
 
       
 
@@ -192,7 +289,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的好意，但我不是那样的人<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -258,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/13/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/13/c/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,6 +367,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/01/13/java/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          我的java笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -438,27 +549,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://liaojinlanlwjian.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>刘万健</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>石兴隆</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>简鹏超</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>主页</a>
             </li>
           
         </ul>
@@ -469,7 +572,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">我是刘辉健&lt;br&gt;&lt;br&gt;欢迎你参观我的博客&lt;br&gt;</div>
   	  	
     	</section>
     
